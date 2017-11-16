@@ -1,4 +1,4 @@
-package com.degjeg.util.fastjson;
+package com.degjeg.util.retrofit.fastjson;
 
 /**
  * Created by Danger
@@ -10,7 +10,6 @@ import java.lang.reflect.Type;
 
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
-import okhttp3.internal.Util;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 

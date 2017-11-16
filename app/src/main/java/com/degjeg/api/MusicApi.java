@@ -1,5 +1,6 @@
 package com.degjeg.api;
 
+import com.degjeg.bean.SongCategory;
 import com.degjeg.bean.SongDetail;
 import com.degjeg.bean.SongListItem;
 
@@ -11,13 +12,16 @@ import java.util.List;
 
 public interface MusicApi {
 
+
+    void getSongCategories(CallBack<List<SongCategory>> callBack);
+
     /**
      * 获取歌曲列表
      *
      * @param type
      * @return
      */
-    void getSongList(int type, int offset, int size, CallBack<List<SongListItem>> callBack);
+    void getSongList(String type, int offset, int size, CallBack<List<SongListItem>> callBack);
 
 
     /**
@@ -40,6 +44,6 @@ public interface MusicApi {
     interface CallBack<T> {
         void onSuccess(T t);
 
-        void onFail(int code, String msg, Exception e);
+        void onFail(int code, String msg, Throwable e);
     }
 }

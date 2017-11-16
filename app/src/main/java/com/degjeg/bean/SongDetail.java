@@ -12,6 +12,18 @@ public class SongDetail {
     private String coverUrl; // 歌曲封面
     private String playerAvator; // 歌手图片
 
+    public SongDetail() {
+    }
+
+    public SongDetail(String id, String fileUrl, String lrcUrl, long duration, String coverUrl, String playerAvator) {
+        this.id = id;
+        this.fileUrl = fileUrl;
+        this.lrcUrl = lrcUrl;
+        this.duration = duration;
+        this.coverUrl = coverUrl;
+        this.playerAvator = playerAvator;
+    }
+
     public String getId() {
         return id;
     }

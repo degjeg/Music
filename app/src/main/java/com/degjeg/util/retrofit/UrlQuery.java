@@ -1,10 +1,8 @@
-package com.degjeg.util.fastjson;
+package com.degjeg.util.retrofit;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
-
-import retrofit2.http.Query;
 
 import static java.lang.annotation.ElementType.PARAMETER;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;

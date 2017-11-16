@@ -13,6 +13,19 @@ public class SongListItem {
     protected String coverUrl; // 歌曲封面
     protected String playerAvator; // 歌手图片
 
+    public SongListItem() {
+    }
+
+    public SongListItem(String id, String songName, String artistName, int duration, int fileSize, String coverUrl, String playerAvator) {
+        this.id = id;
+        this.songName = songName;
+        this.artistName = artistName;
+        this.duration = duration;
+        this.fileSize = fileSize;
+        this.coverUrl = coverUrl;
+        this.playerAvator = playerAvator;
+    }
+
     public String getId() {
         return id;
     }

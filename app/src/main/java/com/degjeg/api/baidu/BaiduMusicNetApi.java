@@ -1,17 +1,13 @@
 package com.degjeg.api.baidu;
 
-import com.degjeg.api.baidu.bean.BaiduSongListItem;
-import com.degjeg.api.baidu.bean.BaseBaiduQueryRequest;
+import com.degjeg.api.baidu.bean.BaiduSongDetailResponse;
+import com.degjeg.api.baidu.bean.BaiduSongListResponse;
 
 import java.util.HashMap;
-import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.Field;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
 
 
 /**
@@ -22,7 +18,12 @@ public interface BaiduMusicNetApi {
     String MUSIC_BASE_URL = "http://tingapi.ting.baidu.com/";
 
     @GET("v1/restserver/ting")
-    Call<List<BaiduSongListItem>> getSongList(@QueryMap HashMap<String, String> pars);
+    // @Headers({MUSIC_BASE_URL})
+    Call<BaiduSongListResponse> getSongList(@QueryMap HashMap<String, String> pars);
+
+    @GET("v1/restserver/ting")
+        // @Headers({MUSIC_BASE_URL})
+    Call<BaiduSongDetailResponse> getSongDetail(@QueryMap HashMap<String, String> pars);
 
 
 }

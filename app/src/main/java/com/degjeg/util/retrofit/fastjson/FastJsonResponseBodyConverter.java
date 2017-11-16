@@ -1,4 +1,4 @@
-package com.degjeg.util.fastjson;
+package com.degjeg.util.retrofit.fastjson;
 
 import com.alibaba.fastjson.JSON;
 
